@@ -1,0 +1,27 @@
+Memory management, Multi-threading, Efficiency and Performance:
+Used Batching concept and BlockingQueue to meet all of these above factors.
+- Grouping configured number of transaction in a batch, put to blocking queue, 
+each thread in the thread pool pick up a batch of transactions from the blocking queue
+and process to add/update the new/existing account balances
+- Online mode can be made horizontally scalable as well by deploying many instances of the application in a cluster mode
+- Offline mode is just vertically scalable by means of multi-threading (Limitation)
+
+Implemented Items:
+Required Functionality
+ - Offline mode as per requirement
+ - Online mode as per requirement
+ - Used JEval and created custom functions for evaluating amount expressions
+ - Transaction for single account transaction update
+ExceptionHandling
+UnitTests
+IntegrationTests
+Logging
+Javadoc
+Property Configuration 
+
+NotCovered:
+Admin credentials to authorise the PrintAcctBalances command
+
+
+
+

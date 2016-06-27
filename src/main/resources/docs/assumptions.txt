@@ -1,0 +1,3 @@
+Assuming all accounts have initial zero balance 
+any exceptions for one transaction record should not affect another
+

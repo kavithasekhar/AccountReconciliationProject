@@ -1,0 +1,13 @@
+JDK Version: Java 1.6
+Build Tool: Maven
+
+mvn clean install => Build by running the unit tests alone
+mvn clean install -P integration-test => Build by running the integration tests alone
+
+
+Please install activemq and have it running. Please accordingly update the jms broker, username and password configuration in the application-online.properties file.
+Run AccountTxEngine.java file by supplying the VM argument as -Dspring.profiles.active=online for online mode
+
+
+Please ensure the full filepath is configured in the 'offline.transaction.file' property of application-offline.properties file and file is copied to that path
+Run AccountTxEngine.java file by supplying the VM argument as -Dspring.profiles.active=offline for offline mode
